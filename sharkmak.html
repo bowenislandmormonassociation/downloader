@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Shark Rentals</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: #002E5D;
+            color: #FDFEFF;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #002E5D, #838383);
+            color: #D4AF37;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5em;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FDFEFF;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .cta {
+            margin-top: 20px;
+        }
+
+        .cta a {
+            text-decoration: none;
+            background: #D4AF37;
+            color: #002E5D;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .cta a:hover {
+            background: #FDFEFF;
+            color: #D4AF37;
+        }
+
+        .features {
+            padding: 50px;
+            text-align: center;
+            background: #FDFEFF;
+            color: #002E5D;
+        }
+
+        .features h2 {
+            font-size: 2.5em;
+            color: #002E5D;
+        }
+
+        .features p {
+            font-size: 1.2em;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .features .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .features .grid div {
+            background: #002E5D;
+            color: #FDFEFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #002E5D;
+            color: #D4AF37;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        footer a {
+            color: #D4AF37;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Apex Elegance: Luxury Shark Rentals
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Swim with the Apex of Luxury</h1>
+            <p>Exclusive Shark Experiences for the Elite</p>
+            <div class="cta">
+                <a href="#features">Explore Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Why Choose Us?</h2>
+        <p>At Luxury Shark Rentals, we provide the world's most sophisticated and safe shark rental services. Whether it's for private aquariums or exclusive underwater expeditions, our offerings redefine opulence.</p>
+
+        <div class="grid">
+            <div>
+                <h3>Handpicked Species</h3>
+                <p>Choose from a curated selection of rare and majestic sharks, including hammerheads and great whites.</p>
+            </div>
+            <div>
+                <h3>Luxury Transport</h3>
+                <p>State-of-the-art, temperature-controlled tanks ensure safe and comfortable transport.</p>
+            </div>
+            <div>
+                <h3>Elite Packages</h3>
+                <p>Customizable experiences, from private tours to shark photography sessions.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Apex Elegance. All Rights Reserved. <br>
+        <a href="#">Contact Us</a> | <a href="#">Privacy Policy</a>
+    </footer>
+</body>
+</html>
