@@ -1,101 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MHTML Downloader</title>
+    <title>Rent A Shark on Mars</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f9;
-        }
-        .container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: repeating-linear-gradient(45deg, red, yellow 10px, pink 20px, purple 30px);
+            color: lime;
+            font-family: Comic Sans MS, cursive;
+            font-size: 30px;
             text-align: center;
         }
-        input[type="text"] {
+        marquee {
+            font-size: 50px;
+            color: cyan;
+        }
+        table {
+            border: 5px solid black;
             width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            margin: auto;
+            background: lime;
         }
-        button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+        td {
+            border: 2px dotted magenta;
+            padding: 20px;
+            text-align: center;
         }
-        button:hover {
-            background-color: #0056b3;
+        img {
+            width: 150px;
+            height: 150px;
+            filter: invert(1);
         }
-        .message {
-            margin-top: 10px;
-            font-size: 0.9em;
+        blink {
+            font-weight: bold;
+            font-size: 40px;
             color: red;
+        }
+        .popup {
+            background: cyan;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            height: 200px;
+            border: 10px dashed magenta;
+            z-index: 9999;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>MHTML Downloader</h1>
-        <p>Enter the URL of the webpage you want to download as MHTML:</p>
-        <input type="text" id="url" placeholder="https://example.com">
-        <button onclick="downloadMHTML()">Download</button>
-        <p class="message" id="message"></p>
-    </div>
-
-    <script>
-        async function downloadMHTML() {
-            const urlInput = document.getElementById('url');
-            const message = document.getElementById('message');
-            const url = urlInput.value.trim();
-
-            if (!url) {
-                message.textContent = 'Please enter a valid URL.';
-                return;
-            }
-
-            try {
-                const response = await fetch('/api/download_mhtml', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ url }),
-                });
-
-                if (!response.ok) {
-                    const error = await response.json();
-                    message.textContent = `Error: ${error.error || 'Unable to download MHTML.'}`;
-                    return;
-                }
-
-                const blob = await response.blob();
-                const downloadUrl = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = downloadUrl;
-                a.download = 'page.mhtml';
-                document.body.appendChild(a);
-                a.click();
-                a.remove();
-                window.URL.revokeObjectURL(downloadUrl);
-                message.textContent = '';
-            } catch (error) {
-                message.textContent = 'An unexpected error occurred. Please try again.';
-            }
-        }
-    </script>
+    <marquee behavior="scroll" direction="left">🚀 SHARKS FOR RENT ON MARS! LIMITED TIME ONLY! 🦈</marquee>
+    <h1>Welcome to Mars Shark Rentals!!!</h1>
+    <h2><blink>SHARKS ON MARS! RENT NOW!</blink></h2>
+    <img src="https://placekitten.com/150/150" alt="Totally a shark">
+    <table>
+        <tr>
+            <td>Mars Shark Model 1</td>
+            <td>Mars Shark Model 2</td>
+            <td>Mars Shark Model 3</td>
+        </tr>
+        <tr>
+            <td><img src="https://via.placeholder.com/150"></td>
+            <td><img src="https://via.placeholder.com/150"></td>
+            <td><img src="https://via.placeholder.com/150"></td>
+        </tr>
+        <tr>
+            <td>Only 5 Mars Rocks/Day</td>
+            <td>Only 10 Mars Rocks/Day</td>
+            <td>Only 20 Mars Rocks/Day</td>
+        </tr>
+    </table>
+    <div class="popup">ACT NOW! Free Space Suit with Every Rental!</div>
+    <audio autoplay loop>
+        <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+    </audio>
 </body>
 </html>
